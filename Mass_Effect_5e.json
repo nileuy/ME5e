@@ -14,8 +14,8 @@
 				]
 			}
 		],
-		"dateAdded": 1593646623,
-		"dateLastModified": 1593646623
+		"dateAdded": 1593668171,
+		"dateLastModified": 1593668171
 	},
 	"spell": [
 		{
@@ -33,9 +33,10 @@
 				}
 			],
 			"range": {
-				"type": "point",
+				"type": "sphere",
 				"distance": {
-					"type": "self"
+					"type": "feet",
+					"amount": 2
 				}
 			},
 			"components": {
@@ -47,9 +48,16 @@
 				}
 			],
 			"entries": [
-				"Expend all of your remaining barrier ticks to create a negative mass effect field in a 2m sphere originating from you. Each Medium or smaller creature or object within the sphere must succeed on Strength saving throw or becomes lifted",
-				"until the end of your next turn. If you expend at least 4 barrier ticks, Large targets must make the saving throw. Creatures with at least 1 shield point have advantage on this saving throw.",
-				"Increase the range of the sphere by 2m at 5th level (4m), 11th level (6m), and 17th level (8m)."
+				"Expend all of your remaining barrier ticks to create a negative mass effect field in a 2m sphere originating from you. Each Medium or smaller creature or object within the sphere must succeed on Strength saving throw or becomes lifted until the end of your next turn. If you expend at least 4 barrier ticks, Large targets must make the saving throw. Creatures with at least 1 shield point have advantage on this saving throw.",
+				"Increase the range of the sphere by 2m at 5th level (4m), 11th level (6m), and 17th level (8m).",
+				"Advancement Options",
+				"Shaped Lift:",
+				"You may choose the shape of the detonation into a cone, cube, or cylinder. You may also shape it into a line, if you do, the line is twice as long as the sphere's radius and 2m wide.",
+				"Heavy Lift:",
+				"Large creatures are affected. If you spend at least 4 barrier ticks, Huge creatures must make the saving throw."
+			],
+			"savingThrow": [
+				"strength"
 			],
 			"areaTags": [
 				"S"
@@ -64,6 +72,180 @@
 						"name": "Sentinel",
 						"source": "MassEffecte"
 					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Biotic Punch",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"Biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Increase the mass of your fist and strike at a target. Make a melee spell attack on a target creature or object within range. On a hit, deal {@damage 1d8} bludgeoning damage. If you have an active barrier, regain 2 barrier ticks and reset the duration of your barrier to 1 minute.",
+				"This spell's damage increases by {@dice 1d8} when you reach 5th level ({@dice 2d8}), 11th level ({@dice 3d8}), 17th level ({@dice 4d8}).",
+				"Advancement Options",
+				"Efficient Punch",
+				"On a hit, gain 3 barrier ticks.",
+				"Siphoning Strike",
+				"On a hit, instead of gaining barrier ticks, gain 10 shield points."
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Sentinel",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Biotic Jump",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "Reaction, which you take when you jump as part of your movement"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Your Spellcasting Ability determines how far you can jump.",
+				"Long Jump. When you make a long jump, you cover a number of meters up to your Spellcasting Ability score. If jumping over an obstacle, subtract 1 meter of distance per 2 meters of the obstacle's height.",
+				"High Jump. When you make a high jump, you leap into the air a number of meters equal to 2 + your Spellcasting Modifier.",
+				"Advancement Options",
+				"Hover",
+				"At any point during your jump, you can end your movement and hover in place. At the start of your next turn, you float to the ground, taking half your movement for that turn.",
+				"Safe Landing",
+				"When landing in Difficult Terrain, you automatically succeed on your Dexterity (Acrobatics) check to remain standing. Additionally, if you would land within an area that causes a Dexterity saving throw, you have advantage on the save."
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Charge",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 45
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Choose a creature or object within range and use the target's mass to pull yourself to its location with incredible force (this movement does not provoke opportunity attacks). The target must make a Dexterity saving throw. On a failed save the target takes {@damage 1d10} force damage and becomes {@condition prone}",
+				"The damage increases by {@dice 1d10} when you reach the 5th level ({@dice 2d10}), 11th level ({@dice 3d10}) and 17th level ({@dice 4d10}).",
+				"Advancement Options",
+				"Barrier Regen",
+				"After you cast Charge, if you have an active barrier, regain 2 barrier ticks and reset the duration of your barrier to 1 minute.",
+				"Area Charge",
+				"Each creature within 4m of the target must make the Dexterity saving throw."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"classes": {
+				"fromClassList": [
 					{
 						"name": "Vanguard",
 						"source": "MassEffecte"
