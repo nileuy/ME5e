@@ -14,8 +14,8 @@
 				]
 			}
 		],
-		"dateAdded": 1593668171,
-		"dateLastModified": 1593668171
+		"dateAdded": 1593854269,
+		"dateLastModified": 1593854269
 	},
 	"spell": [
 		{
@@ -246,6 +246,912 @@
 			],
 			"classes": {
 				"fromClassList": [
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Dark Channel",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 40
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Make a ranged spell attack on a creature you can see within range. On a hit, you plague the target with a persistent, damaging biotic field. The creature is primed (necrotic) and takes {@damage 1d6} necrotic damage and {@damage 1d6} necrotic damage at the start of your turn while you maintain the spell. If the creature dies, dark channel transfers to the nearest hostile creature within 10m of the target.",
+				"The damage increases by {@dice 1d6} when you reach the 5th level ({@dice 2d6}), 11th level ({@dice 3d6}) and 17th level ({@dice 4d6}).",
+				"Advancement Options",
+				"Cripple",
+				"If the affected creature would make a saving throw or attack roll, as a reaction you may increase the severity of Dark Channel. The affected creature must roll a {@dice d4} and subtract the number rolled from the attack roll or saving throw.",
+				"Improved Damage",
+				"Increase the damage die type to {@dice d10}"
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Lift",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"Biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 40
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You can manipulate light objects with a series of mass effect fields. When you cast this cantrip, you can try to move an object that weighs up to 10 kgs (~20 pounds). If the object isn't being worn or carried, you automatically move it up to 10 meters in any direction, but not beyond the range of this spell.",
+				"If the object is worn or carried by a creature, you must make an ability check with your spellcasting ability contested by that creature's Strength check. If you succeed, you pull the object away from that creature and can move it up to 10 meters in any direction but not beyond the range of this spell.",
+				"Advancement Options",
+				"Magician",
+				"You can exert fine motor control over the object, such as manipulating a simple tool or removing an object from a container.",
+				"Improved Lift",
+				"You can manipulate an object that weighs up to 25 kgs (~55 pounds)."
+			],
+			"opposedCheck": [
+				"strength"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Sentinel",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Nova",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Transfer the energy of your barrier into a biotic explosion, consuming your remaining barrier ticks. Creatures within a 2m sphere centered on you must make a Dexterity saving throw. On a failed save, a creature is knocked {@condition prone} and takes force damage equal to X{@dice d8}, where X is the number of barrier ticks. On a successful save, a creature takes half as much damage.",
+				"This spell's damage increases by {@dice 1d8} when you reach 5th level (X{@dice  + 1d8}), 11th level (X{@dice  + 2d8}), 17th level (X{@dice  + 3d8})",
+				"Advancement Options",
+				"Improved Damage",
+				"Increase the damage die to {@dice d12}.",
+				"Half blast",
+				"When you cast nova, it consumes half of your remaining barrier ticks (rounded up) but deals damage as if you had used all of your remaining barrier ticks."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Phase Disruptor",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 40
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You focus the energy of your barrier into a high-powered beam at a target creature or object within range. Remove 1 barrier tick and make a ranged spell attack on that target. On a hit, the creature takes {@damage 3d4} force damage.",
+				"You may use additional barrier ticks to create more than one beam at higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.",
+				"Advancement Options",
+				"Improved Damage",
+				"Increase the damage die type to {@dice d6}.",
+				"Cripple",
+				"A creature hit by Phase Disruptor has disadvantage on its next attack roll."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Sentinel",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Slam",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Target a lifted creature or object and slam it to the ground dealing {@damage 2d8} bludgeoning damage and knocking it {@condition prone}. The target is no longer lifted.",
+				"The number of targets increases by 1 when you reach 5th level (2), 11th level (3) and 17th level (4).",
+				"Advancement Options",
+				"Stun",
+				"If the target is a creature, it must pass a Constitution saving throw or becomes {@condition stunned} until the end of your next turn.",
+				"Reaction",
+				"When a creature or object you can see becomes lifted, you may cast Slam on it as a reaction."
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Sentinel",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Slow Fall",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "Reaction, which you take when you or a creature within 10m of you falls"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"When you or a creature within 10m of you falls, choose up to five falling creatures within range. Create a negative mass effect field around each creature, slowing the rate of descent to 20m per round. If the creature lands before the spell ends, it takes no Falling damage and can land on its feet, and the spell ends for that creature.",
+				"Advancement Options",
+				"Improved Duration",
+				"Increase the duration to 5 minutes",
+				"Navigate",
+				"As you fall, you can direct your fall by 2m in any direction except up. You may do this once per round."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Throw",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 40
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Make a ranged spell attack on a target you can see within range. On a hit, the target takes force damage equal to {@damage 1d8} force damage. If the target is Medium or smaller, it is pushed backward 10m.",
+				"This spell's damage increases by {@dice 1d8} when you reach 5th level ({@dice 2d8}), 11th level ({@dice 3d8}), 17th level ({@dice 4d8}).",
+				"Advancement Options",
+				"Radial Blast",
+				"On a hit, the damage is dealt to each creature within a 2m radius of the target.",
+				"Improved Damage",
+				"Increase the damage die type to {@dice d12}"
+			],
+			"damageInflict": [
+				"force"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Sentinel",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Alter Center Mass",
+			"source": "MassEffecte",
+			"level": 1,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Up to three creatures of your choice that you can see within range must make Constitution saving throws as you generate minor mass effect fields that alter their center mass. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a {@dice d4} and subtract the number rolled from the attack roll or saving throw.",
+				"Advancement Options",
+				"Disorient",
+				"Creatures that fail the saving throw become disoriented. Until the end of your next turn, attacks made against the creature has advantage and the creature can't take reactions.",
+				"Debilitate",
+				"Creatures that fail the saving throw can barely move. Until the end of your next turn, the creature's speed becomes 0 and it automatically fails Dexterity saving throws."
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, you can target two additional creature for each slot level above 1st."
+					]
+				}
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Sentinel",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Biotic Slash",
+			"source": "MassEffecte",
+			"level": 1,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"The next time you hit a creature with a melee weapon attack during the spell's duration, increase the density of the weapon dealing an extra {@damage 2d8} force damage to the target. This damage detonates primed targets.",
+				"Advancement Options",
+				"Improved Damage",
+				"Increase the damage die to {@dice 2d12}",
+				"Destined Hit",
+				"Gain a +5 bonus to your next melee weapon attack roll"
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the extra damage dealt by the attack increases by {@dice 2d8} for each slot above the 1st."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sentinel",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Catapult",
+			"source": "MassEffecte",
+			"level": 1,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 20
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Choose one object weighing 1 to 10 kilos (about 2 to 20 lbs.) within range that isn't being worn or carried. The object flies in a straight line up to 30m in a direction you choose before falling to the ground, stopping early if it impacts against a solid surface. If the object would strike a creature, that creature must make a Dexterity saving throw. On a failed save, the object strikes the creature and stops moving. When the object strikes something, the object and what it strikes each take {@damage 3d10} bludgeoning damage.",
+				"Advancement Options",
+				"Salvo",
+				"When you cast Salvo, you may target a number of objects equal to or less than your spellcasting ability modifier. The combined weight of the objects cannot exceed the maximum weight limit of the spell (10 kilos at 1st level, 12 kilos at 2nd level, etc).",
+				"Counterstrike",
+				"As a reaction, which you take when a creature within 30m you casts a spell or makes an attack. Fling the object toward the creature which fails its Dexterity saving throw. If the creature was casting a spell, it must succeed on a Constitution saving throw or he spell fails (DC 10 or half the Catapult damage, whichever is higher). If the creature was attacking, it has disadvantage on the attack roll."
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the maximum weight of objects that you can target with this spell increases by 5 kilos (10lbs), and the damage increases by {@dice 2d10}, for each slot level above 1st."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"L"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Sentinel",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Gravity Field",
+			"source": "MassEffecte",
+			"level": 1,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You create an field of unstable gravity in a 6-meter cube starting from a point within range. For the duration, this space becomes difficult terrain.",
+				"A creature in the area when you cast the spell must succeed on a Strength saving throw or be {@condition restrained} until the spell ends. A creature {@condition restrained} by this spell can use its action to make a Strength check against your spell save DC. On a success, it frees itself.",
+				"When the spell ends, the gravity field dissipates.",
+				"Advancement Options",
+				"Pulsing Field",
+				"As a bonus action, for the duration of the spell, you can force a number of creatures equal to twice the spell level that are within the gravity field to make a Strength saving throw or be {@condition restrained} until the spell ends.",
+				"Warping Field",
+				"A creature takes {@damage 1d6} necrotic damage per spell level when it enters the gravity field for the first time on a turn or ends its turn there."
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Lance",
+			"source": "MassEffecte",
+			"level": 1,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 50
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Release a lance of energy at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes force damage equal to {@dice 3d8} + your spellcasting ability modifier.",
+				"Advancement Options",
+				"Anti-shield",
+				"Lance deals an additional {@damage 2d4} lightning damage. This damage increases by {@dice 2d4} for each spell slot level above the first.",
+				"Improved Damage",
+				"Increase the damage die type to {@dice d12}."
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 2d8} for each slot level above the 1st."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Sentinel",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Pull",
+			"source": "MassEffecte",
+			"level": 1,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Make a ranged spell attack on a Medium or smaller creature or object within range. On a success, you create a mass effect field around the target and it becomes lifted 2m in the air until the end of your next turn. While you maintain this spell, as a bonus action, you can move the target up to 4m in any direction. If you move the target further than 30m away from you, the spell ends and the target falls to the ground.",
+				"Advancement Options",
+				"Heavy Pull",
+				"You may target a Large or smaller creature or object.",
+				"Grip",
+				"While maintaining this spell, you may use your bonus action to increase pressure around the target, dealing {@damage 2d6} bludgeoning damage."
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, increase the duration. 1 minute at 2nd level, 10 minutes at 3rd level, and 1 hour at 4th level."
+					]
+				}
+			],
+			"spellAttack": [
+				"R"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Sentinel",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Shockwave",
+			"source": "MassEffecte",
+			"level": 1,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Create a cascading shockwave in a 2m wide by 10m long line originating from you. Each creature caught in the line must make a Dexterity saving throw. On a failed save, a creature takes {@damage 3d6} force damage and is knocked {@condition prone}. On a successful save, a creature takes half as much damage.",
+				"Advancement Options",
+				"Controlled Shockwave",
+				"The shockwave travels 16m. You may change the direction of the line every 4m.",
+				"Improved Damage",
+				"Increase damage die type to {@dice d10}"
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 2d6} for each slot level above the 1st."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Sentinel",
+						"source": "MassEffecte"
+					},
 					{
 						"name": "Vanguard",
 						"source": "MassEffecte"
