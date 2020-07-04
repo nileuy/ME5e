@@ -14,10 +14,365 @@
 				]
 			}
 		],
-		"dateAdded": 1593854269,
-		"dateLastModified": 1593854269
+		"dateAdded": 1593906890,
+		"dateLastModified": 1593906890
 	},
 	"spell": [
+		{
+			"name": "Barrier Detonation",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"Biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 2
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Expend all of your remaining barrier ticks to create a negative mass effect field in a 2m sphere originating from you. Each Medium or smaller creature or object within the sphere must succeed on Strength saving throw or becomes lifted until the end of your next turn. If you expend at least 4 barrier ticks, Large targets must make the saving throw. Creatures with at least 1 shield point have advantage on this saving throw.",
+				"Increase the range of the sphere by 2m at 5th level (4m), 11th level (6m), and 17th level (8m).",
+				"Advancement Options",
+				"Shaped Lift:",
+				"You may choose the shape of the detonation into a cone, cube, or cylinder. You may also shape it into a line, if you do, the line is twice as long as the sphere's radius and 2m wide.",
+				"Heavy Lift:",
+				"Large creatures are affected. If you spend at least 4 barrier ticks, Huge creatures must make the saving throw."
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"areaTags": [
+				"S"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Sentinel",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Biotic Punch",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"Biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Increase the mass of your fist and strike at a target. Make a melee spell attack on a target creature or object within range. On a hit, deal {@damage 1d8} bludgeoning damage. If you have an active barrier, regain 2 barrier ticks and reset the duration of your barrier to 1 minute.",
+				"This spell's damage increases by {@dice 1d8} when you reach 5th level ({@dice 2d8}), 11th level ({@dice 3d8}), 17th level ({@dice 4d8}).",
+				"Advancement Options",
+				"Efficient Punch",
+				"On a hit, gain 3 barrier ticks.",
+				"Siphoning Strike",
+				"On a hit, instead of gaining barrier ticks, gain 10 shield points."
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Sentinel",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Biotic Jump",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "Reaction, which you take when you jump as part of your movement"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Your Spellcasting Ability determines how far you can jump.",
+				"Long Jump. When you make a long jump, you cover a number of meters up to your Spellcasting Ability score. If jumping over an obstacle, subtract 1 meter of distance per 2 meters of the obstacle's height.",
+				"High Jump. When you make a high jump, you leap into the air a number of meters equal to 2 + your Spellcasting Modifier.",
+				"Advancement Options",
+				"Hover",
+				"At any point during your jump, you can end your movement and hover in place. At the start of your next turn, you float to the ground, taking half your movement for that turn.",
+				"Safe Landing",
+				"When landing in Difficult Terrain, you automatically succeed on your Dexterity (Acrobatics) check to remain standing. Additionally, if you would land within an area that causes a Dexterity saving throw, you have advantage on the save."
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Charge",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 45
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Choose a creature or object within range and use the target's mass to pull yourself to its location with incredible force (this movement does not provoke opportunity attacks). The target must make a Dexterity saving throw. On a failed save the target takes {@damage 1d10} force damage and becomes {@condition prone}",
+				"The damage increases by {@dice 1d10} when you reach the 5th level ({@dice 2d10}), 11th level ({@dice 3d10}) and 17th level ({@dice 4d10}).",
+				"Advancement Options",
+				"Barrier Regen",
+				"After you cast Charge, if you have an active barrier, regain 2 barrier ticks and reset the duration of your barrier to 1 minute.",
+				"Area Charge",
+				"Each creature within 4m of the target must make the Dexterity saving throw."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Dark Channel",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 130
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Make a ranged spell attack on a creature you can see within range. On a hit, you plague the target with a persistent, damaging biotic field. The creature is primed (necrotic)",
+				"and takes {@damage 1d6} necrotic damage and {@damage 1d6} necrotic damage at the start of your turn while you maintain the spell. If the creature dies, dark channel transfers to the nearest hostile creature within 10m of the target.",
+				"The damage increases by {@dice 1d6} when you reach the 5th level ({@dice 2d6}), 11th level ({@dice 3d6}) and 17th level ({@dice 4d6}).",
+				"Advancement Options",
+				"Cripple",
+				"If the affected creature would make a saving throw or attack roll, as a reaction you may increase the severity of Dark Channel. The affected creature must roll a {@dice d4} and subtract the number rolled from the attack roll or saving throw.",
+				"Improved Damage",
+				"Increase the damage die type to {@dice d10}"
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Lift",
+			"source": "MassEffecte",
+			"level": 0,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 130
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You can manipulate light objects with a series of mass effect fields. When you cast this cantrip, you can try to move an object that weighs up to 10 kgs (~20 pounds). If the object isn't being worn or carried, you automatically move it up to 10 meters in any direction, but not beyond the range of this spell.",
+				"If the object is worn or carried by a creature, you must make an ability check with your spellcasting ability contested by that creature's Strength check. If you succeed, you pull the object away from that creature and can move it up to 10 meters in any direction but not beyond the range of this spell.",
+				"Advancement Options",
+				"Magician",
+				"You can exert fine motor control over the object, such as manipulating a simple tool or removing an object from a container.",
+				"Improved Lift",
+				"You can manipulate an object that weighs up to 25 kgs (~55 pounds)."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Sentinel",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
 		{
 			"name": "Barrier Detonation",
 			"source": "MassEffecte",
@@ -1150,6 +1505,214 @@
 					},
 					{
 						"name": "Sentinel",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Warp Cloud",
+			"source": "MassEffecte",
+			"level": 1,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 20
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You fill the air with a highly concentrated warp field 2 meters on each side at a point within range. A creature takes {@damage 4d4} necrotic damage when it enters the spell area for the first time on a turn or starts its turn there. A creature within the cloud is primed (necrotic).",
+				"Advancement Options",
+				"Burst",
+				"As a bonus action, you can end this spell and force each creature within 2 meters of the cloud to make a Dexterity saving throw. A creature takes {@damage 4d4} force damage on a failed save or half as much on a successful one. This damage increases by {@damage 4d4} force damage per spell level.",
+				"Shift",
+				"As a bonus action, you can move this cube of warp energy up to 4 meters in any direction you choose. It can pass through solid objects, but you can only control it's movement while you have line of sight."
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 4d4} for each slot level above 1st."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Backlash",
+			"source": "MassEffecte",
+			"level": 2,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Generate a frontal biotic aegis barrier with 15 hit points. If a creature you can see hits you with an attack while the aegis is active, including the triggering attack, split the damage equally between yourself and the aegis. If the attack is a ranged weapon attack from a non-heavy weapon, the portion of the damage that would be dealt to you is dealt to the attacking creature instead.",
+				"If the damage is an odd number, you may choose where the extra 1 damage is dealt.",
+				"If damage that would be dealt to the aegis is greater than its remaining hit points, deal any remaining damage to yourself.",
+				"When the aegis drops to 0 hit points the spell ends.",
+				"Advancement Options",
+				"Durable",
+				"Increase the aegis's hit points to 30.",
+				"Counterstrike",
+				"If you cast Backlash as a reaction against a melee attack, gain an attack of opportunity against the attacking creature."
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 3rd level or higher, the aegis's hit points increase by 10 for each slot level above the 2nd."
+					]
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Sentinel",
+						"source": "MassEffecte"
+					},
+					{
+						"name": "Vanguard",
+						"source": "MassEffecte"
+					}
+				]
+			}
+		},
+		{
+			"name": "Biotic Orbs",
+			"source": "MassEffecte",
+			"level": 2,
+			"school": "P",
+			"subschools": [
+				"biotic"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 40
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Summon 3 biotic orbs that float around you, fueling your biotic energies. As an action, you may expend an orb and make a ranged spell attack on a creature within 40m. On a hit, deal force damage equal to {@dice 2d10} + your spellcasting ability modifier.",
+				"As an action, you may expend 3 orbs to cast a spell using your highest available spell slot. Casting a spell in this way does not consume the spell slot.",
+				"Advancement Options",
+				"Improved Orbs",
+				"You may expend 2 orbs to cast a spell using your highest available spell slot.",
+				"Retribution",
+				"As a reaction to taking damage, you may expend all of your remaining biotic orbs. For each expended orb, make a ranged spell attack on a target you can see within range. You can direct all attacks to hit one creature or several."
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 3rd level or higher, the number of orbs increases by 2 for each slot level above the 2nd."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Adept",
 						"source": "MassEffecte"
 					},
 					{
