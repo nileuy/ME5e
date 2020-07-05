@@ -14,8 +14,8 @@
 				]
 			}
 		],
-		"dateAdded": 1593936339,
-		"dateLastModified": 1593936339
+		"dateAdded": 1593936614,
+		"dateLastModified": 1593936614
 	},
 	"spell": [
 		{
@@ -1634,7 +1634,7 @@
 			"name": "Warp",
 			"source": "MassEffecte",
 			"level": 2,
-			"school": "C",
+			"school": "P",
 			"subschools": [
 				"biotic"
 			],
@@ -1649,6 +1649,9 @@
 				"distance": {
 					"type": "self"
 				}
+			},
+			"components": {
+				"s": true
 			},
 			"duration": [
 				{
@@ -1762,7 +1765,7 @@
 			"name": "Dark Sphere",
 			"source": "MassEffecte",
 			"level": 3,
-			"school": "C",
+			"school": "P",
 			"subschools": [
 				"biotic"
 			],
