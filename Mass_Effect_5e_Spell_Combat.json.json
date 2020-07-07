@@ -1,0 +1,727 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "MassEffectCombatSpells",
+				"abbreviation": "MEcs",
+				"full": "Mass Effect Combat Spells",
+				"url": "",
+				"authors": [
+					"NiLe"
+				],
+				"convertedBy": [
+					"NiLe"
+				]
+			}
+		],
+		"dateAdded": 1594164727,
+		"dateLastModified": 1594164727
+	},
+	"spell": [
+		{
+			"name": "Ballistic Blades",
+			"source": "MassEffectCombatSpells",
+			"level": 0,
+			"school": "P",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 33
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Fire a salvo of blades at a target creature or object you can see within range. Make a ranged weapon attack, you add your proficiency bonus to this roll. On a hit, the target takes {@damage 2d12} piercing damage.",
+				"You must spend a short or long rest reloading the armguard before you can this ability again.",
+				"This feature's damage increases by {@dice 2d12} when you reach 5th level ({@dice 4d12}), 11th level ({@dice 6d12}), 17th level ({@dice 8d12})",
+				"Advancement Options",
+				"Bleeding Blades",
+				"On a hit, the target takes an additional {@damage 3d12} damage at the start of its turn due to blood loss. This damage bypasses shields.",
+				"Exploding blades",
+				"On a hit, the target takes an additional {@damage 1d12} thunder damage and must pass a Constitution saving throw (DC 8 + proficiency bonus) or becomes {@condition stunned} until the end of your next turn."
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Beehive",
+			"source": "MassEffectCombatSpells",
+			"level": 0,
+			"school": "P",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 20
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Draw and fire your antipersonnel cannon, colloquially called \"the beehive\". It ejects superheated shrapnel in a 6m cone, originating from you. Each creature caught in the blast must make Dexterity saving throw. The DC of this saving throw is 8 + your proficiency bonus + your Dexterity modifier. On a failed save, a creature takes {@damage 3d6} piercing damage or half as much damage on a successful one.",
+				"You must spend a short or long rest reconfiguring the cannon to use it again.",
+				"This feature's damage increases by {@dice 2d6} when you reach 5th level ({@dice 5d6}), 11th level ({@dice 7d6}), 17th level ({@dice 9d6})",
+				"Advancement Options",
+				"Anti-Flesh",
+				"Deals twice as much damage to organic creatures with no shield points.",
+				"Remote Deploy",
+				"As an action, you can set up your Beehive in a separate location. Once it is deployed you can use an Attack action to fire it. You can also fire it as a reaction whenever a creature enters its 6m cone."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Blade Armor",
+			"source": "MassEffectCombatSpells",
+			"level": 0,
+			"school": "P",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				},
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "Reaction, which you take when you are dealt damage"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"As a bonus action or as a reaction to taking damage, you reinforce your armor with razor-sharp blades that damage nearby enemies. Until the spell ends, you AC increases by 2 but you are unable to Dodge and have disadvantage on Dexterity saving throws. You can use a bonus action to deactivate blade armor.",
+				"While blade armor is active, it is considered a melee weapon that deals {@damage 1d6} piercing damage. If a creature is {@condition grappled} by you, you have advantage on attack rolls made with blade armor against the {@condition grappled} creature.",
+				"You have advantage on your Strength (Athletics) to grapple and deal {@damage 1d6} piercing damage when you grapple the target. A creature that is {@condition grappled} by you while blade armor is active takes {@damage 1d6} piercing damage each time it attempts to escape from the grapple.",
+				"You must finish a long rest before you can use this ability again.",
+				"Blade armor's damage increases by {@dice 1d6} when you reach 5th level ({@dice 2d6}), 11th level ({@dice 3d6}), 17th level ({@dice 4d6}).",
+				"Advancement Options",
+				"Poisoned Armor",
+				"Creatures hit by your blade armor must succeed on a DC 14 Constitution saving throw or become {@condition poisoned} for 1 hour.",
+				"Retribution",
+				"When a creature within 2m of you hits you with a melee attack while blade armor is active, you may use your reaction to make a melee weapon attack with blade armor against the creature."
+			],
+			"conditionInflict": [
+				"grappled",
+				"poisoned"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Concussive Shot",
+			"source": "MassEffectCombatSpells",
+			"level": 0,
+			"school": "P",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Load a specialized thermal clip into the weapon you are currently holding. Until you reload, any successful ranged attacks deal an additional {@damage 1d8} bludgeoning damage and medium-sized or smaller creatures must pass a Strength saving throw (DC 8 + proficiency bonus + DEX modifier) or are knocked {@condition prone}.",
+				"The damage increases by {@dice 1d8} when you reach the 5th level ({@dice 2d8}), 11th level ({@dice 3d8}) and 17th level ({@dice 4d8}).",
+				"You have 3 charges of Concussive Shot. You regain all of your charges when you finish a long rest.",
+				"Advancement Options",
+				"Stunning Shot",
+				"A creature hit by concussive shot must make a Constitution saving throw instead of a Strength saving throw. On a failed save, the creature is {@condition stunned} until the end of its next turn.",
+				"Improved shot",
+				"Increase the bonus damage of concussive shot to {@dice d12}."
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Flak Cannon",
+			"source": "MassEffectCombatSpells",
+			"level": 0,
+			"school": "P",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 33
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"As an Attack action, you load and fire krogan-designed shells that burst into shrapnel upon impact. Choose a target location within range. Each creature in a 4m-radius sphere centered on the point of impact of the shell must make a Dexterity saving throw (DC 8 + proficiency bonus + DEX modifier). A target takes {@damage 2d6} piercing damage on a failed save, or half as much damage on a successful one.",
+				"You have 3 charges of Flak Cannon. You regain all of your charges on a long rest.",
+				"This feature's damage increases by {@dice 2d6} when you reach 5th level ({@dice 4d6}), 11th level ({@dice 6d6}), 17th level ({@dice 8d6})",
+				"Advancement Options",
+				"Shredder",
+				"If a creature with 0 shield points takes damage from Flak Cannon, it becomes wounded. A wounded creature takes {@damage 1d4} damage from blood loss at the start of each of its turns. A wounded creature can make a DC 15 Constitution saving throw, ending the effect on a success. Alternatively, any creature (including the wounded creature), can make a DC 15 Wisdom (Medicine) check or use a charge of Medi-gel, ending the effect on a success.",
+				"Stunner",
+				"When you attack with Flak Cannon, you can choose to fire concussive blasts dealing no damage. Creatures within the sphere must instead make a Constitution saving throw. On a failed save, a creature becomes {@condition stunned} until the start of your next turn."
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Fortification",
+			"source": "MassEffectCombatSpells",
+			"level": 0,
+			"school": "P",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when you are targeted by an attack you can see"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Reinforce your armor using protective Foucault currents. Gain +5 AC until the start of your next turn, including against the triggering attack.",
+				"You must finish a short or long rest before you can use this ability again.",
+				"Advancement Options",
+				"Lasting Fortification",
+				"Fortification lasts an additional turn.",
+				"Venting Fortification",
+				"When fortification ends, the currents are sent to your gauntlets. Your next melee weapon attack is made at advantage and deals an additional {@damage 2d10} bludgeoning damage."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Havoc Strike",
+			"source": "MassEffectCombatSpells",
+			"level": 0,
+			"school": "P",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 26
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Use a propulsion jet built into your leg armor to spring to a location within 8m and strike the ground with violent force. Each creature within a 2m radius of where you land must make a Dexterity saving throw (DC 8 + proficiency bonus + STR modifier). On a failed save, a creature takes {@damage 2d8} thunder damage or half as much on a successful one.",
+				"You can use this feature twice between short or long rests.",
+				"This feature's damage increases by {@dice 2d8} when you reach 5th level ({@dice 4d8}), 11th level ({@dice 6d8}), 17th level ({@dice 8d8}).",
+				"Advancement Options",
+				"Improved Distance",
+				"You can jump up to 12m.",
+				"Improved Radius",
+				"Increase the radius of the impact to 4m"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Hawk Missile Launcher",
+			"source": "MassEffectCombatSpells",
+			"level": 0,
+			"school": "P",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 197
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Activate your personal shoulder cannon: The Hawk Missile Launcher. This attack automatically hits a target within range dealing {@damage 3d6} thunder damage.",
+				"You can use the Hawk Missile Launcher once per short rest.",
+				"This feature's damage increases by {@dice 3d6} when you reach 5th level ({@dice 6d6}), 11th level ({@dice 9d6}), 17th level ({@dice 12d6}).",
+				"Advancement Options",
+				"Anti-Shield",
+				"The missile detonates a small EMP, transforming the damage to lightning.",
+				"Three-headed beast",
+				"Your missile splits into three separate missiles, each dealing {@damage 1d6} damage ({@dice 2d6} at 5th level, {@dice 3d6} at 11th level and {@dice 4d6} at 17th level). You can direct the missiles at the same target or at different ones."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Hex Shield",
+			"source": "MassEffectCombatSpells",
+			"level": 0,
+			"school": "P",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 7
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Toss a portable shield generator onto the ground in front of you. It generates 2m tall and wide, hexagon-shaped shield with 5 AC and 50 shield points.",
+				"As long as the Hex Shield has shield points, it provides full cover to creatures behind it.",
+				"Hex shield regains all shield points when you finish a long rest.",
+				"Advancement Options",
+				"Hearty Shield",
+				"Increase the shield's hit points to 100.",
+				"Large Shield",
+				"The Shield covers a 4m wide area."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Nightshade Blades",
+			"source": "MassEffectCombatSpells",
+			"level": 0,
+			"school": "P",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 33
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Your omni-tool is equipped with three microscopic, poison-tipped blades that are able to pierce through shields and armor. Make a ranged weapon attack on a creature you can see within range, expending one blade. You add your proficiency bonus to this roll. On a hit, the target takes {@damage 1d12} poison damage and must succeed on a Constitution saving throw (DC 8 + proficiency bonus) or becomes {@condition poisoned} until it finishes a short rest. All damage caused by nightshade blades bypasses shields.",
+				"You must be within melee range and use an action to recover a blade, at which point you can reapply your poison and reload it into your omni-tool during a short rest. If you fail to recover your blades, you can create 3 new ones for 1 hour of work during a long rest.",
+				"This feature's damage increases by {@dice 1d12} when you reach 5th level ({@dice 2d12}), 11th level ({@dice 3d12}), 17th level ({@dice 4d12}).",
+				"Advancement Options",
+				"Paralyze",
+				"A creature that fails the Constitution saving throw becomes {@condition paralyzed} until the end of your next turn.",
+				"Powerful Poison",
+				"The creature has disadvantage on its Constitution saving throw."
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Siege Pulse",
+			"source": "MassEffectCombatSpells",
+			"level": 0,
+			"school": "P",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 13
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Spend 5 shield points as you overload your shield capacitors causing a loud, kinetic wave to erupt in a 4m-radius sphere centered on you. Each creature within the sphere becomes {@condition deafened} and must make a Constitution saving throw (DC 8 + proficiency bonus). On a failed save, a creature takes {@damage 2d8} psychic damage and is {@condition stunned} until the end of your next turn. On a successful save, a creature takes half as much damage. Synthetic creatures have advantage on this saving throw.",
+				"The first time you use siege pulse, your armor suffers no adverse effect. If you use this spell again before you finish a short rest, roll a {@dice d20}. On a 5 or lower you shields overload. You lose all shield points, take {@damage 2d12} lightning damage, and cannot gain shield points unless you repair your armor. Each time you use this feature again before finishing a short rest, you suffer a -5 penalty to the roll.",
+				"This feature's psychic damage increases by {@dice 1d8} when you reach 5th level ({@dice 3d8}), 11th level ({@dice 4d8}), 17th level ({@dice 5d8}).",
+				"Advancement Options",
+				"Improved Pulse",
+				"Add your Constitution modifier to the DC of the saving throw as you increase the frequency of the pulse to a level you can barely withstand.",
+				"Lingering Pulse",
+				"Each creature that takes psychic damage from siege pulse has disadvantage on its melee or ranged attack rolls until the start of your next turn."
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Stimulant Pack",
+			"source": "MassEffectCombatSpells",
+			"level": 0,
+			"school": "P",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Inject yourself with a stimulant pack. For the next minute, whenever you make an attack roll or saving throw, you can roll a {@dice d4} and add the number rolled to the attack roll or saving throw.",
+				"You must finish a long rest before you can use this feature again.",
+				"Advancement Options",
+				"Friendly",
+				"You can inject a willing creature within melee range with the stimulant pack.",
+				"High Tolerance",
+				"You can use stimulant pack twice long rest."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Tactical Scan",
+			"source": "MassEffectCombatSpells",
+			"level": 0,
+			"school": "P",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 98
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Spend your action scanning a creature you can see, studying its movement and revealing weaknesses. Make a Wisdom (Insight) check, contested by the target's Charisma (Deception) check. On a success, you have advantage on attack rolls against the target and you score a critical hit on a roll of 19 or 20.",
+				"This benefit lasts 1 minute or until you successfully use this feature against a different target.",
+				"Advancement Options",
+				"Area Scan",
+				"Scan a 6m cube. Each creature within the cube must make the Charisma (Deception) check against your Wisdom (Insight). This feature only affects a single target, but you can choose one creature from the ones that failed the contested check.",
+				"Telegraphed Attacks",
+				"Your HUD alerts you when the creature is about to attack. It has disadvantage on ranged and melee attacks against you and you have advantage on any saving throws caused by spells and abilities of the creature."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "New Spell",
+			"source": "MassEffectCombatSpells",
+			"level": 0,
+			"school": "P",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when an explosive projectile is within 6m of you."
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 20
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Your omni-tool's trophy system detects incoming explosives that fires a small ordinance charge to preemptively detonate hostile explosives. As a reaction to an explosive projectile (grenade or rocket from a heavy weapon) that you can see within 6 meters of you, you may preemptively detonate it. If the blast would cause you to make a Dexterity saving throw, you have advantage on the save.",
+				"You may use this ability only once per long rest.",
+				"Advancement Options",
+				"Advanced Notice",
+				"The triggering range is increased to 12 meters, and you may detonate the explosive at any point along its trajectory.",
+				"Dual Trophy",
+				"You may use your trophy system twice between long rests."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		},
+		{
+			"name": "Turbocharge",
+			"source": "MassEffectCombatSpells",
+			"level": 0,
+			"school": "P",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "turn",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Activate a subroutine that temporarily vents weapon heat through your armor to improve thermal clip efficiency and weapon damage. Until the end of your turn, the weapon you're currently holding gains Burst Fire, the heat cost for making a Burst Fire attack is reduced by 1 heat, and you may make a Burst Fire attack as an Attack action.",
+				"You must finish a short or long rest before using Turbocharge again.",
+				"Advancement Options",
+				"Improved Damage",
+				"+2 damage with the turbocharged weapon",
+				"Improved Accuracy",
+				"The DC of the Dexterity saving throw is increased to 18"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			}
+		}
+	]
+}
